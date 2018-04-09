@@ -13,7 +13,7 @@ import com.vio.spring5.springsecuritydemo.domain.User;
 public interface UserRepository extends CrudRepository<User, Long> {
    
    /**
-    * Find a @{User} by their username. You can @throw an @{AccountDoesntExist} exception
+    * Find a @{User} by their username. You can @throw an @{UserNotFound} exception
     * @param username @{User} username
     * @return @{User} if it exists
     */
