@@ -51,11 +51,12 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 				throw new UsernameNotFoundException("No user found with the username: " + username);
 			}
 			
-      // Return an @{UserDetails} @{User} which has the details of the User's @{User} account that wants
-      // to login
+                        // Return an @{UserDetails} @{User} which has the details of the User's @{User} account that wants
+                        // to login
 			return new org.springframework.security.core.userdetails.User(
 					user.get().getUsername(), user.get().getPassword(), user.get().isEnabled(), 
 				  true, true, true, getAuthorities(user.get().getRoles()));
+		
 		} catch (final Exception e) {
 			
 			throw new RuntimeException(e);
@@ -71,10 +72,10 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 	 */
 	private static Collection<? extends GrantedAuthority> getAuthorities(final Collection<Roles> roles){
 		
-    // Create an Collection<GrantedAuthority>
+                // Create an Collection<GrantedAuthority>
 		final  Collection<GrantedAuthority> grantedAuthority = new ArrayList<>();
 		
-    // Add the @{User} roles to the grantedAuthority Collection and return the Collection
+                // Add the @{User} roles to the grantedAuthority Collection and return the Collection
 		for(Roles role : roles) {
 			grantedAuthority.add(new SimpleGrantedAuthority(role.getCode()));
 		}
