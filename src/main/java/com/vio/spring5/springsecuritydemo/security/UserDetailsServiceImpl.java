@@ -45,7 +45,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 		 * if not found @throws @{UsernameNotFoundException)
 		 */
 		try {
-			Optional<Account> user = accountRepository.findByUsername(username);
+			Optional<User> user = userRepository.findByUsername(username);
 			
 			if(!user.isPresent()) {
 				throw new UsernameNotFoundException("No user found with the username: " + username);
