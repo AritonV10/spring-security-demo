@@ -1,1 +1,1 @@
-# spring-security-demo
+# Basic Spring Security Registration/Login
