@@ -1,4 +1,4 @@
-import package com.vio.spring5.springsecuritydemo.domain;
+package com.vio.spring5.springsecuritydemo.domain;
 
 import java.util.Collection;
 
