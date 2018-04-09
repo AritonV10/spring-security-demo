@@ -27,7 +27,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     /**
      * Set the @{AutheticationProvider} to our @{CustomAutheticationProvider}
      * @param auth @{AutheticationManagerBuilder}
-     /*
+     */
     @Override
     public void configure(final AuthenticationManagerBuilder auth) throws Exception{
         auth.autheticationProvider(this.autheticationProvider());
