@@ -69,7 +69,7 @@ public class UserCommand {
   /**
    * @{User} email
    * We will be using @Email validation.
-   *
+   * Feel free to use your own custom email validation. I'd highly suggest to do so.
    */
   @Email(message="Not a valid email") @NotBlank(message = "Email field can't be empty)
   private String email;
