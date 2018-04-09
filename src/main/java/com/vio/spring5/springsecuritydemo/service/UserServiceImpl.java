@@ -87,4 +87,14 @@ public class UserServiceImpl implements UserService{
 	
 	return userOptional.get();
     }
+     /**
+      * Get all @{User} and return them in a Set
+      * @return Set<@{User}>
+      */
+     public Set<User> getUsers() {
+	
+	return StreamSupport.stream(userRepository.findAll()
+			    .spliterator(), false)
+			    .collectors(Collectors.toCollection(HashSet::new));
+     }
 }
