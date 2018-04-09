@@ -25,4 +25,9 @@ public interface UserService {
    * @return @{User} domain object
    */
   User getUserByUsername(String username);
+  
+  /**
+   * @return Set<@{User}>
+   */
+  Set<User> getUsers();
 }
