@@ -48,7 +48,7 @@ public class UserRegisterController {
    /**
     * When the user is done and presses on the registration button
     * this method gets called and expects a @{UserCommand} object
-    * If It's valid, then it registeres the users else it redirects back to registration page
+    * If It's valid, then it registeres the user else it redirects back to registration page and displays the errors
     * @param bindingResult @{BindingResult} for validation
     * @param user @{UserCommand} object
     */
