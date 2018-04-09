@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+	<meta charset="UTF-8">
+</head>
+<body>
+      
+      <form th:action="@{/login}" th:method="POST">
+        
+          <div th:if="${#fields.hasErrors('*')">
+              <ul>
+                <li th:each="err : ${#fields.errors('*')" th:text="${err}"></li>
+              </ul>
+          </div>
+          
+          <!-- For Username field, the name has to be "username", for Password field the name has to be "password"
+          and the method must be "POST" -->
+          <
+          label>Username</label>
+          <input type="text" name="username" >
+          <br>
+          <label>Password</label>
+          <input type="text" name="password">
+      </form>
+      
+</body>
+</html>
