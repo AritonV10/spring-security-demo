@@ -1,10 +1,9 @@
-import package com.vio.spring5.springsecuritydemo.domain
+import package com.vio.spring5.springsecuritydemo.domain;
 
 import java.util.Collection;
 
 import javax.persistence.JoinColumn;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -12,9 +11,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
-import javax.persistence.Table;
-
-import lombok.EqualsAndHashCode;
+import lombok.*;
 
 /**
 * This is just a simple domain object. You can extend and build on top of it.
