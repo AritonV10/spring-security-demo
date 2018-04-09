@@ -37,8 +37,8 @@ public class UserServiceImpl {
 	  private  PasswordEncoder passwordEncoder;
    
    /**
-     * Logger useful for debugging
-     */
+    * Logger useful for debugging
+    */
     private Logger log = LoggerFactory.getLogger(this.getClass());
     
     
