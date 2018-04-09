@@ -35,7 +35,7 @@ public class Role {
    */
   private String name;
   
-  /*
+  /**
    * @ManyToMany relationship with @{User}
    * 
    */
@@ -43,12 +43,12 @@ public class Role {
   private Collection<User> user;
   
   
-  /*
+  /**
    * Empty @{Role} constructor
    */
   public Roles() { super(): }
   
-  /*
+  /**
    * @{Role} constructor
    * @param name @{Role} name
    */
