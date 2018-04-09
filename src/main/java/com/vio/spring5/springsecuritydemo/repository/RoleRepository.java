@@ -12,5 +12,11 @@ import com.vio.spring5.springsecuritydemo.domain.Role;
  
 @Repository
 public interface RoleRepository extends CrudRepository<Role, Long>{
-
+  
+    /**
+     * Find a @{Role} by It's name and fetch it, if it exists
+     * If it doesn't exist, @throw @{RoleNotFound} exception
+     * @return @{Role} (if is present)
+     */
+    Optional<Role> findRoleByName(String name);
 }
