@@ -67,6 +67,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 	
 	
 	/**
+	 * This method is optional. You can just create a Collection<${GrantedAuthority}> inside the loadUserByUserName method
 	 * Return a list of Users granted authorities
 	 * @param roles Collection<@{Role}>
 	 * @return Collection<@{GrantedAuthority}>
