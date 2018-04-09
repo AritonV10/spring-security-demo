@@ -23,7 +23,8 @@ import com.vio.spring5.springsecuritydemo.repository.UserRepository;
 /**
  * 
  * @{UserDetailsService} interface implementation
- *
+ * Read the Javadoc of @{UserDetailsService}, @{User} (springframework one, not our @{User}) to understand how it works
+ * behind the scenes
  */
 
 @Service
