@@ -17,6 +17,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 @Configuration
 @EnableWebMvcSecurity
+@ComponentScan(basePackages = { "com.vio.spring5.springsecuritydemo.security" })
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     @Autowired
@@ -32,13 +33,12 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         auth.autheticationProvider(this.autheticationProvider());
     }
     
-    
-   /**
-	 * We will configure our website by 
-	 * @see org.springframework.security.config.annotation.web.configuration.
-	 * WebSecurityConfigurerAdapter#configure(org.springframework.security.config.
-	 * annotation.web.builders.HttpSecurity)
-	 */
+    /**
+     * We will configure our website by 
+     * @see org.springframework.security.config.annotation.web.configuration.
+     * WebSecurityConfigurerAdapter#configure(org.springframework.security.config.
+     * annotation.web.builders.HttpSecurity)
+     */
     @Override
     protected void configure(HttpSecurity http) throws Exception {
 
