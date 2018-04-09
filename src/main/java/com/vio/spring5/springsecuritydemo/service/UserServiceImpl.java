@@ -42,6 +42,12 @@ public class UserServiceImpl {
     private Logger log = LoggerFactory.getLogger(this.getClass());
     
     
+	
+    /**
+     * Convert the @{UserCommand} to @{User} and persist it into the database
+     * @param command @{UserCommand} object
+     * @return @{User}
+     */
     User registerUser(UserCommand command) {
         // Here you can check if the @{UserCommand} email and username already exists
         // If it does, then throw an exception
@@ -56,6 +62,8 @@ public class UserServiceImpl {
         final Collection<Role> roles = new ArrayList<>();
         roles.add(roleService.findByName("ROLE_USER");
         
+        // Add the @{Role} of ROLE_USER to the newly registered @{User}
+	// and persist it
         user.setRoles(roles);
         
         return userRepository.save(user);
