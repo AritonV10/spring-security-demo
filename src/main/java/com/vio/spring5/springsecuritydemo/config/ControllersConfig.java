@@ -18,7 +18,7 @@ public class ControllersConfig extends WebConfigurerAdapter{
       messageSource.setDefaultEncoding("UTF-8");
 		
 		return messageSource;
-	}
+    }
   
    @Override
    public void configureDefaultServletHandling(final DefaultServletHandlerConfigurer configurer) {
@@ -26,7 +26,7 @@ public class ControllersConfig extends WebConfigurerAdapter{
   }
   
    @Override
-    public void addResourceHandlers(final ResourceHandlerRegistry registry) {
+   public void addResourceHandlers(final ResourceHandlerRegistry registry) {
         registry
           .addResourceHandler("/resources/**")
           .addResourceLocations("/", "/resources/");
