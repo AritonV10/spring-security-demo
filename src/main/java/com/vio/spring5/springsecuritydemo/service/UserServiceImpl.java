@@ -48,7 +48,7 @@ public class UserServiceImpl {
      * @param command @{UserCommand} object
      * @return @{User}
      */
-    User registerUser(UserCommand command) {
+    public User registerUser(UserCommand command) {
         // Here you can check if the @{UserCommand} email and username already exists
         // If it does, then throw an exception
         
@@ -67,5 +67,20 @@ public class UserServiceImpl {
         user.setRoles(roles);
         
         return userRepository.save(user);
+    }
+	
+    /**
+     * Find a @{User} by their username and return it. If it doesn't exist, @throw an @{UserNotFound} exception
+     * @param username @{User} username
+     * @return @{User}
+     */
+    public User getUserByUsername(String username) {
+	Optional<User> userOptional = userRepository.findByUsername(username);
+	
+	if(!userOptional.isPresent()){
+	  // throw a UserNotFound exception
+	}
+	
+	return userOptional.get();
     }
 }
