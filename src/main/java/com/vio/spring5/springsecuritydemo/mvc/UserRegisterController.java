@@ -59,7 +59,7 @@ public class UserRegisterController {
       if(bindingResult.hasError){
          bindingResult.getErrors
                       .forEach(error -> {
-                       log.debug(error.toString()); )
+                       log.debug(error.toString()); {)
       
         return "/register";
       }
